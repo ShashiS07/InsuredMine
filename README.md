@@ -16,7 +16,7 @@
 
 # Endpoints
 
-- server is running on localhost:4000/
+- server is running on http://localhost:4000/
 
 - To import csv file and inserts documents  in mongoDb use- http://localhost:4000/importcsv
 
