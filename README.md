@@ -18,53 +18,53 @@
 
 - server is running on "localhost:4000/*
 
-- To import csv file and inserts documents  in mongoDb use- "localhost:4000//importcsv" 
+- To import csv file and inserts documents  in mongoDb use- http://localhost:4000/importcsv
 
 ###### Note:- Send file through form-data.
 
 # EndPoints for User
 
-- To create user => use - "localhost:4000/createuser"
+- To create user => use - http://localhost:4000/createuser
 
-- To get all the users => use - "localhost:4000/getusers"
+- To get all the users => use - http://localhost:4000/getusers
 
-- To get user by id => use - "localhost:4000/getusers/:id"
+- To get user by id => use - http://localhost:4000/getusers/:id
 
 -- send id in params for updating and deleting.
 
-- To update user => use - "localhost:4000/updateuser/:id"
+- To update user => use - http://localhost:4000/updateuser/:id
 
-- To delete user => use - "localhost:4000/deleteuser/:id"
+- To delete user => use - http://localhost:4000/deleteuser/:id
 
 ###### NOTE:- id shoud be type of ObjectID. eg:(6440e4a70f2da6d2f28ddffb)
 
 # EndPoints for Policy
-- To create policy => use - "localhost:4000/createpolicy"
+- To create policy => use - http://localhost:4000/createpolicy
 
-- To get all the policies => use - "localhost:4000/getpolicies"
+- To get all the policies => use - http://localhost:4000/getpolicies
 
-- To get the policy by id => use - "localhost:4000/getpolicies/:id"
+- To get the policy by id => use - http://localhost:4000/getpolicies/:id
 
 -- send id in params for updating and deleting.
 
-- To update policy => use - "localhost:4000/updatepolicy/:id"
+- To update policy => use - http://localhost:4000/updatepolicy/:id
 
-- To delete policy => use - "localhost:4000/deletepolicy/:id"
+- To delete policy => use - http://localhost:4000/deletepolicy/:id
 
 ###### NOTE:- id shoud be type of ObjectID. eg:(6440e4a70f2da6d2f28ddffb)
 
 # EndPoints for Account
-- To create account => use - "localhost:4000/createaccount"
+- To create account => use - http://localhost:4000/createaccount
 
-- To get all the accounts => use - "localhost:4000/getaccounts"
+- To get all the accounts => use - http://localhost:4000/getaccounts
 
-- To get account by id  => use - "localhost:4000/getaccounts/:id"
+- To get account by id  => use - http://localhost:4000/getaccounts/:id
 
 -- send id in params for updating and deleting.
 
-- To update account => use - "localhost:4000/updateaccount/:id"
+- To update account => use - http://localhost:4000/updateaccount/:id
 
-- To delete account => use - "localhost:4000/deleteaccount/:id"
+- To delete account => use - http://localhost:4000/deleteaccount/:id
 
 ###### NOTE:- id shoud be type of ObjectID. eg:(6440e4a70f2da6d2f28ddffb)
 
