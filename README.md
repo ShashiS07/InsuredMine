@@ -7,6 +7,8 @@
 
 - To install packages do *npm i* in terminal
 
+- After that use *npm start* for start the server
+
 ### API's
 
 - CRUD Api's(POST,GET,PUT,DELETE) for Users,Accounts,Policy
