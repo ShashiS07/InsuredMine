@@ -5,6 +5,7 @@ const multer=require('multer')
 const path=require('path')
 const {importData}=require('../controller/importData')
 const {createUser,getusers,updateUser,deleteUser}=require('../controller/userController')
+const {accountCreate,getAccount,updateAccount,deleteAccount}=require('../controller/accountController')
 app.use(express.static(path.resolve(__dirname,'public')));
 
 // =====================connection for importing csv file=====================================
@@ -30,6 +31,17 @@ router.post('/createuser',createUser)
 router.get('/getusers',getusers)
 router.put('/updateuser/:id',updateUser)
 router.delete('/deleteuser/:id',deleteUser)
+
+// ==========routes for account=======================================
+
+router.post('/createaccount',accountCreate)
+router.get('/getaccounts',getAccount)
+router.put('/updateaccount/:id',updateAccount)
+router.delete('/deleteaccount/:id',deleteAccount)
+
+// =================routes for policy=======================================
+
+
 
 router.all('/*',function(req,res){
     return res.status(404).send("Invalid Http Request")

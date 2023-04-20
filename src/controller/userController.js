@@ -50,6 +50,7 @@ try{
     if(!Object.keys(dataForUpdate).length) return res.status(400).send({status:false,message:"Please provide data for update"})
 
     let updatedData=await userModel.findByIdAndUpdate({_id:id},{$set:dataForUpdate},{new:true})
+    if(!updatedData) return res.status(404).send({status:false,message:"User Not Found"})
     return res.status(200).send({status:true,message:"Updated",user:updatedData})
 }catch(err){
     return res.status(500).send({status:false,message:err.message})
@@ -61,7 +62,8 @@ try{
 const deleteUser=async (req,res)=>{
 try{
     let id=req.params.id
-    await userModel.findByIdAndUpdate({_id:id},{$set:{isDeleted:true}},{new:true})
+    let deletedUser=await userModel.findByIdAndUpdate({_id:id},{$set:{isDeleted:true}},{new:true})
+    if(!deletedUser) return res.status(404).send({status:false,message:"User Not Found or Already deleted"})
     return res.status(200).send({status:true,message:"User Deletion Successful"})
 }catch(err){
     return res.status(500).send({status:false,message:err.message})
