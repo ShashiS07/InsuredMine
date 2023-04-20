@@ -37,6 +37,18 @@ const getPolicies = async (req, res) => {
         return res.status(500).send({ status: false, message: err.message })
     }
 }
+// =====================get policy by id============================================
+const getpolicybyId = async (req, res) => {
+    try {
+        let id=req.params.id
+        let policy = await policyModel.findOne({_id:id, isDeleted: false })
+        if (!policy) return res.status(404).send({ status: false, message: "Policy Not Found" })
+
+        return res.status(200).send({ status: true, message: "Success", policy: policy })
+    } catch (err) {
+        return res.status(500).send({ status: false, message: err.message })
+    }
+}
 
 // =============================update Policy===========================================
 
@@ -68,4 +80,4 @@ const deletePolicy = async (req, res) => {
 }
 
 // ==========================================================================================
-module.exports = { createPolicy,getPolicies,updatePolicy,deletePolicy }
+module.exports = { createPolicy,getPolicies,getpolicybyId,updatePolicy,deletePolicy }

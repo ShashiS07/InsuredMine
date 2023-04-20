@@ -4,9 +4,9 @@ const router=express.Router()
 const multer=require('multer')
 const path=require('path')
 const {importData}=require('../controller/importData')
-const {createUser,getusers,updateUser,deleteUser}=require('../controller/userController')
-const {accountCreate,getAccount,updateAccount,deleteAccount}=require('../controller/accountController')
-const { createPolicy,getPolicies,updatePolicy,deletePolicy }=require('../controller/policyController')
+const {createUser,getusers,getuserbyId,updateUser,deleteUser}=require('../controller/userController')
+const {accountCreate,getAccount,getaccountbyId,updateAccount,deleteAccount}=require('../controller/accountController')
+const { createPolicy,getPolicies,getpolicybyId,updatePolicy,deletePolicy }=require('../controller/policyController')
 app.use(express.static(path.resolve(__dirname,'public')));
 
 // =====================connection for importing csv file=====================================
@@ -30,6 +30,7 @@ router.post('/importcsv',upload.single('file'),importData)
 
 router.post('/createuser',createUser)
 router.get('/getusers',getusers)
+router.get('/getusers/:id',getuserbyId)
 router.put('/updateuser/:id',updateUser)
 router.delete('/deleteuser/:id',deleteUser)
 
@@ -37,6 +38,7 @@ router.delete('/deleteuser/:id',deleteUser)
 
 router.post('/createaccount',accountCreate)
 router.get('/getaccounts',getAccount)
+router.get('/getaccounts/:id',getaccountbyId)
 router.put('/updateaccount/:id',updateAccount)
 router.delete('/deleteaccount/:id',deleteAccount)
 
@@ -44,6 +46,7 @@ router.delete('/deleteaccount/:id',deleteAccount)
 
 router.post('/createpolicy',createPolicy)
 router.get('/getpolicies',getPolicies)
+router.get('/getpolicies/:id',getpolicybyId)
 router.put('/updatepolicy/:id',updatePolicy)
 router.delete('/deletepolicy/:id',deletePolicy)
 

@@ -39,6 +39,18 @@ const getAccount = async (req, res) => {
         return res.status(500).send({ status: false, message: err.message })
     }
 }
+// =================================get account by id=======================================
+const getaccountbyId = async (req, res) => {
+    try {
+        let id=req.params.id
+        let account = await accountModel.findOne({_id:id, isDeleted: false })
+        if (!account) return res.status(404).send({ status: false, message: "Account Not Found" })
+
+        return res.status(200).send({ status: true, message: "Success", account: account })
+    } catch (err) {
+        return res.status(500).send({ status: false, message: err.message })
+    }
+}
 
 // =================================Update account===========================================
 
@@ -70,4 +82,4 @@ const deleteAccount = async (req, res) => {
 }
 
 // ===================================================================================
-module.exports = { accountCreate, getAccount, updateAccount, deleteAccount }
+module.exports = { accountCreate, getAccount,getaccountbyId, updateAccount, deleteAccount }

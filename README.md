@@ -26,6 +26,8 @@
 
 - To get all the users => use - "localhost:4000/getusers"
 
+- To get user by id => use - "localhost:4000/getusers/:id"
+
 -- send id in params for updating and deleting.
 
 - To update user => use - "localhost:4000/updateuser/:id"
@@ -39,6 +41,8 @@
 
 - To get all the policies => use - "localhost:4000/getpolicies"
 
+- To get the policy by id => use - "localhost:4000/getpolicies/:id"
+
 -- send id in params for updating and deleting.
 
 - To update policy => use - "localhost:4000/updatepolicy/:id"
@@ -51,6 +55,8 @@
 - To create account => use - "localhost:4000/createaccount"
 
 - To get all the accounts => use - "localhost:4000/getaccounts"
+
+- To get account by id  => use - "localhost:4000/getaccounts/:id"
 
 -- send id in params for updating and deleting.
 

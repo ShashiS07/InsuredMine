@@ -39,7 +39,18 @@ const getusers = async (req, res) => {
         return res.status(500).send({ status: false, message: err.message })
     }
 }
+// ====================get users By id=============================================
+const getuserbyId = async (req, res) => {
+    try {
+        let id=req.params.id
+        let user = await userModel.findOne({_id:id, isDeleted: false })
+        if (!user) return res.status(404).send({ status: false, message: "User Not Found" })
 
+        return res.status(200).send({ status: true, message: "Success", user: user })
+    } catch (err) {
+        return res.status(500).send({ status: false, message: err.message })
+    }
+}
 // ===========================update user===========================================
 
 const updateUser = async (req, res) => {
@@ -71,4 +82,4 @@ const deleteUser = async (req, res) => {
 }
 
 // ==========================================================================================
-module.exports = { createUser, getusers, updateUser, deleteUser }
+module.exports = { createUser, getusers,getuserbyId, updateUser, deleteUser }
