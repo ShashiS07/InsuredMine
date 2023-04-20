@@ -5,20 +5,20 @@
 - In This project, we can also perform CRUD operations for Users, Accounts and  Policies
 # For Running this project
 
--To install packages do *npm i* in terminal
+- To install packages do *npm i* in terminal
 
-###API's
+### API's
 
--CRUD Api's(POST,GET,PUT,DELETE) for Users,Accounts,Policy
--One more Api i.e POST for uploading/attaching CSV file to mongoDb and also insert documents into Collections(Agent,User,Policy,User_Accounts) accoringly.
+- CRUD Api's(POST,GET,PUT,DELETE) for Users,Accounts,Policy
+- One more Api i.e POST for uploading/attaching CSV file to mongoDb and also insert documents into Collections(Agent,User,Policy,User_Accounts) accoringly.
 
 # Endpoints
 
-server is running on "localhost:4000/*
+- server is running on "localhost:4000/*
 
 - To import csv file and inserts documents  in mongoDb use- "localhost:4000//importcsv" 
 
-Note:- Send file through form-data.
+## Note:- Send file through form-data.
 
 # EndPoints for User
 
@@ -32,7 +32,7 @@ Note:- Send file through form-data.
 
 - To delete user => use - "localhost:4000/deleteuser/:id"
 
-NOTE:- id shoud be type of ObjectID
+## NOTE:- id shoud be type of ObjectID
 -- eg:(6440e4a70f2da6d2f28ddffb)
 
 # EndPoints for Policy
@@ -46,7 +46,7 @@ NOTE:- id shoud be type of ObjectID
 
 - To delete policy => use - "localhost:4000/deletepolicy/:id"
 
-NOTE:- id shoud be type of ObjectID
+## NOTE:- id shoud be type of ObjectID
 -- eg:(6440e4a70f2da6d2f28ddffb)
 
 # EndPoints for Account
@@ -60,10 +60,10 @@ NOTE:- id shoud be type of ObjectID
 
 - To delete account => use - "localhost:4000/deleteaccount/:id"
 
-NOTE:- id shoud be type of ObjectID
+## NOTE:- id shoud be type of ObjectID
 --eg:(6440e4a70f2da6d2f28ddffb)
 
-###Models
+### Models
 
 -User Model
 ```
@@ -82,7 +82,7 @@ NOTE:- id shoud be type of ObjectID
 {category_name:{String},csr:{String},account_name:{String},account_type:{String},zip:{String}}
 ```
 
-###Tech-Stacks/Package Used
+### Tech-Stacks/Package Used
 
 - Express.js
 - MongoDB
