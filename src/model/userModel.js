@@ -8,7 +8,8 @@ const userSchema=new mongoose.Schema({
     phone:{type:String},
     address:{type:String},
     state:{type:String},
-    dob:{type:String}
+    dob:{type:String},
+    isDeleted:{type:Boolean,default:false}
 },{timestamps:true})
 
 module.exports=mongoose.model('user',userSchema)
