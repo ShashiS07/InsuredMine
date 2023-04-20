@@ -22,25 +22,25 @@ var storage=multer.diskStorage({
 var upload=multer({storage:storage})
 
 
-// =====================================routes================================================
+// ==============route form uploding csv file in MongoDb===============================
 
 router.post('/importcsv',upload.single('file'),importData)
 
-// =============routes for user==================================
+// =========================routes for user============================================
 
 router.post('/createuser',createUser)
 router.get('/getusers',getusers)
 router.put('/updateuser/:id',updateUser)
 router.delete('/deleteuser/:id',deleteUser)
 
-// ==========routes for account=======================================
+// ==========================routes for account=======================================
 
 router.post('/createaccount',accountCreate)
 router.get('/getaccounts',getAccount)
 router.put('/updateaccount/:id',updateAccount)
 router.delete('/deleteaccount/:id',deleteAccount)
 
-// =================routes for policy=======================================
+// ===========================routes for policy=======================================
 
 router.post('/createpolicy',createPolicy)
 router.get('/getpolicies',getPolicies)
