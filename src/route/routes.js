@@ -6,6 +6,7 @@ const path=require('path')
 const {importData}=require('../controller/importData')
 const {createUser,getusers,updateUser,deleteUser}=require('../controller/userController')
 const {accountCreate,getAccount,updateAccount,deleteAccount}=require('../controller/accountController')
+const { createPolicy,getPolicies,updatePolicy,deletePolicy }=require('../controller/policyController')
 app.use(express.static(path.resolve(__dirname,'public')));
 
 // =====================connection for importing csv file=====================================
@@ -41,7 +42,12 @@ router.delete('/deleteaccount/:id',deleteAccount)
 
 // =================routes for policy=======================================
 
+router.post('/createpolicy',createPolicy)
+router.get('/getpolicies',getPolicies)
+router.put('/updatepolicy/:id',updatePolicy)
+router.delete('/deletepolicy/:id',deletePolicy)
 
+// ===========================route for invalid path================================
 
 router.all('/*',function(req,res){
     return res.status(404).send("Invalid Http Request")
